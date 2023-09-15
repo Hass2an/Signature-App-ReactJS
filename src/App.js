@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useState } from 'react'
+import Title from './componets/Title'
+const App = () => {
+  const [name,setName] = useState("")
+  const [dob,setDob] = useState("")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Signature App</h1>
+      <Title text =  {name}/>
+      <Title text = {dob}/>
+      <p>lorem1sds;d;sjdgajjamnbvcxfarwa</p>
+      <input type = "text" value={name} onChange={(e)=>setName(e.target.value)} />
+      <input type = "date" value={dob} onChange={(e)=>setDob(e.target.value)} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
